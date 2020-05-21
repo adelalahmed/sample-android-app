@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="125dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:padding="6dip">
+
+    <ImageView
+        android:id="@+id/icon1"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:maxWidth="96dp"
+        android:maxHeight="96dp"
+        app:srcCompat="@drawable/democrat_logo" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/icon1">
+
+        <TextView
+            android:id="@+id/senate_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="John Brad" />
+
+        <TextView
+            android:id="@+id/senate_party"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/senate_name"
+            android:text="Democrate" />
+
+        <TextView
+            android:id="@+id/senate_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/senate_party"
+            android:text="@android:string/fingerprint_icon_content_description" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
