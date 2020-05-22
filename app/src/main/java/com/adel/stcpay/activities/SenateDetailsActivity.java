@@ -21,7 +21,7 @@ public class SenateDetailsActivity extends AppCompatActivity {
     // Card Elements
     public TextView senatorName, senatorLink, bioLink, partyName;
     // Infromation Elements
-    public TextView addressTv;
+    public TextView addressTv, officeTv, nameTv, birthdayTv, endDateTv, genderTv, sortNameTv, websiteTv, phoneTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +56,14 @@ public class SenateDetailsActivity extends AppCompatActivity {
         bioLink     = (TextView) findViewById(R.id.dv_bioLink);
         partyName   = (TextView) findViewById(R.id.dv_partyName_tv);
         addressTv   = (TextView) findViewById(R.id.dt_tv_address);
+        officeTv    = (TextView) findViewById(R.id.dt_tv_office);
+        nameTv      = (TextView) findViewById(R.id.dt_tv_name);
+        birthdayTv  = (TextView) findViewById(R.id.dt_tv_birthday);
+        endDateTv   = (TextView) findViewById(R.id.dt_tv_endDate);
+        genderTv    = (TextView) findViewById(R.id.dt_tv_gender);
+        sortNameTv  = (TextView) findViewById(R.id.dt_tv_sortName);
+        websiteTv   = (TextView) findViewById(R.id.dt_tv_website);
+        phoneTv     = (TextView) findViewById(R.id.dt_tv_phone);
     }
 
 

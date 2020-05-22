@@ -20,6 +20,8 @@ public class Senate {
     private String enddate;
     @SerializedName("website")
     private String website;
+    @SerializedName("phone")
+    private String phone;
 
     public String getRole() {
         return role;
@@ -83,5 +85,13 @@ public class Senate {
 
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
