@@ -1,5 +1,8 @@
 package com.adel.stcpay.presenters;
 
+import android.view.View;
+
+import com.adel.stcpay.MyApplication;
 import com.adel.stcpay.R;
 import com.adel.stcpay.activities.SenateDetailsActivity;
 import com.adel.stcpay.domain.Address;
@@ -9,10 +12,10 @@ import com.adel.stcpay.domain.Senate;
 public class DetailsPresenter {
     private SenateDetailsActivity activity;
 
-    public DetailsPresenter(SenateDetailsActivity activity) {
+    public DetailsPresenter(final SenateDetailsActivity activity) {
         this.activity = activity;
-    }
 
+    }
     public void showSenateDetails(Senate s){
 
         PersonalDetails personalDetails = s.getPersonalDetails();
@@ -41,8 +44,7 @@ public class DetailsPresenter {
         activity.sortNameTv.setText(personalDetails.getSortname());
         activity.websiteTv.setText(s.getWebsite());
         activity.phoneTv.setText(s.getPhone());
-
-
-
     }
+
+
 }

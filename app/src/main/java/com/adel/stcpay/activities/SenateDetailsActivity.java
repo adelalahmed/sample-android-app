@@ -2,11 +2,14 @@ package com.adel.stcpay.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.adel.stcpay.MyApplication;
 import com.adel.stcpay.R;
 import com.adel.stcpay.domain.Senate;
 import com.adel.stcpay.presenters.DetailsPresenter;
@@ -18,6 +21,7 @@ public class SenateDetailsActivity extends AppCompatActivity {
     private DetailsPresenter presenter;
     // UI Elements
     public CircularImageView partyIcon;
+    public ImageButton backButton;
     // Card Elements
     public TextView senatorName, senatorLink, bioLink, partyName;
     // Infromation Elements
@@ -40,6 +44,13 @@ public class SenateDetailsActivity extends AppCompatActivity {
         presenter = new DetailsPresenter(this);
         presenter.showSenateDetails(s);
 
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
     }
 
     private Senate extract(String t){
@@ -50,6 +61,7 @@ public class SenateDetailsActivity extends AppCompatActivity {
     }
 
     private void initUI(){
+        backButton = (ImageButton) findViewById(R.id.imageButton17);
         partyIcon   = (CircularImageView)findViewById(R.id.dv_party_icon);
         senatorName = (TextView) findViewById(R.id.dv_senator_name_tv);
         senatorLink = (TextView) findViewById(R.id.dv_senator_link);
