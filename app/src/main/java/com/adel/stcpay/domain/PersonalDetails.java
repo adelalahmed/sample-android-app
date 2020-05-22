@@ -17,6 +17,8 @@ public class PersonalDetails {
     private String gender;
     @SerializedName("sortname")
     private String sortname;
+    @SerializedName("bioguideid")
+    private String bioGuideId;
 
     public PersonalDetails() {
 
@@ -76,5 +78,13 @@ public class PersonalDetails {
 
     public void setSortname(String sortname) {
         this.sortname = sortname;
+    }
+
+    public String getBioGuideId() {
+        return bioGuideId;
+    }
+
+    public void setBioGuideId(String bioGuideId) {
+        this.bioGuideId = bioGuideId;
     }
 }
